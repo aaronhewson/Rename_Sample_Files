@@ -14,7 +14,7 @@ library(fs)
 ## Renaming JD Orchard Samples
 # Path to the Excel with renaming columns, and folder with CEL files to be renamed
 excel_path <- "File Naming.xlsx"
-file_dir <- "C:/Users/curly/Desktop/Apple Genotyping/Genotyping Data/JD Apple Genotype Data"
+file_dir <- "C:/Users/curly/Desktop/Apple Genotyping/Genotyping Data/JD Samples"
 
 # Read Excel file
 rename_df <- read_excel(excel_path)
@@ -63,7 +63,7 @@ for(i in seq_len(nrow(rename_df))){
 ##Renaming PFR Genotyped Samples
 # Path to the Excel with renaming columns, and folder with CEL files to be renamed
 excel_path <- "File Naming.xlsx"
-file_dir <- ""
+file_dir <- "C:/Users/curly/Desktop/Apple Genotyping/Genotype Files/PFR Samples"
 
 # Read Excel file
 rename_df <- read_excel(excel_path)
