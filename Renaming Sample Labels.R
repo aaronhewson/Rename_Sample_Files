@@ -11,7 +11,7 @@ library(readxl)
 library(fs)
 
 # Path to the Excel with renaming columns, and folder with CEL files to be renamed
-excel_path <- "C:/Users/curly/Desktop/Apple Genotyping/Genotyping Data/File Naming.xlsx"
+excel_path <- "File Naming.xlsx"
 file_dir <- "C:/Users/curly/Desktop/Apple Genotyping/Genotyping Data/JD Apple Genotype Data"
 
 # Read Excel file
