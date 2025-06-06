@@ -18,7 +18,7 @@ file_dir <- "C:/Users/curly/Desktop/Apple Genotyping/Inputs/Genotype Files/Aggre
 # Read Excel file
 rename_df <- read_excel(excel_path)
 
-# Loop through each row and rename the files
+# Loop through each row and rename the genotyping files
 for(i in seq_len(nrow(rename_df))){ 
   old_name <- rename_df$Gen_Old[i] 
   new_name <- rename_df$Gen_New[i] 
@@ -43,7 +43,7 @@ file_dir <- "C:/Users/curly/Desktop/Apple Genotyping/Results/B Allele Frequencie
 # Read Excel file
 rename_df <- read_excel(excel_path)
 
-# Loop through each row and rename the files
+# Loop through each row and rename the CNV files
 for(i in seq_len(nrow(rename_df))){ 
   old_name <- rename_df$CNVOld[i] 
   new_name <- rename_df$CNVNew[i] 
