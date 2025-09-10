@@ -1,15 +1,15 @@
-##This script renames filenames, as per the relevant File Naming excel sheet. This is needed prior to genotyping, and then also prior to B Allele Frequency plotting.
+# Rename sample files, according to the "File Naming" Excel sheet. 
+# This is needed for .CEL files received from genotyping, which are previously named based on genotyping well. These are renamed to Sample IDs.
+# This is also needed for .CNV files produced by Axiom CNV Tool, which amends files with ".nexus.cnv.txt". These are renamed to only have ".txt" as the suffix.
 
-#If packages not installed, run code below:
-install.packages("readxl")
-install.packages("fs")
+
+# Load Packages -----------------------------------------------------------
 
 #Loading packages
 library(readxl)
 library(fs)
 
-
-## Renaming sample filenames for genotyping. This ensures filenames are specific enough to distinguish samples.
+# Rename .CEL Sample Files Prior to Genotyping ----------------------------
 
 # Path to the Excel with renaming columns, and folder with .CEL genotype files to be renamed
 excel_path <- "File Naming.xlsx"
@@ -35,7 +35,8 @@ for(i in seq_len(nrow(rename_df))){
 }
 
 
-##Renaming CNV Files
+# Rename CNV Files from Axiom ---------------------------------------------
+
 # Path to the Excel with renaming columns, and folder with .txt CNV files to be renamed
 excel_path <- "File Naming.xlsx"
 file_dir <- "C:/Users/curly/Desktop/Apple Genotyping/Results/B Allele Frequencies/Axiom CNV Output Files"
